@@ -41,10 +41,11 @@ def generate_challenge_with_ai(difficulty: str) -> Dict[str, Any]:
             temperature=0.7
         )
 
-        content = response.choices[0].message.content.strip()
-        print("RAW RESPONSE:", content)  # 调试用
-        challenge_data = json.loads(content)
+        content = response.choices[0].message.content.strip() # strip() removes leading and trailing whitespace
+        print("RAW RESPONSE:", content)  # a pure JSON string
+        challenge_data = json.loads(content) # python Dict
 
+        # Check whether the required fields exist
         required_fields = ["title", "options", "correct_answer_id", "explanation"]
         for field in required_fields:
             if field not in challenge_data:

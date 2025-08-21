@@ -12,6 +12,7 @@ app.add_middleware(
     allow_headers=["*"]
 )
 
-
+# 把 challenge 模块里的路由挂到 /api/...
+# 把 webhooks 模块里的路由挂到 /webhooks/...
 app.include_router(challenge.router, prefix="/api")
 app.include_router(webhooks.router, prefix="/webhooks")

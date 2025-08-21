@@ -13,7 +13,6 @@ from ..database.db import (
 from ..utils import authenticate_and_get_user_details
 from ..database.models import get_db
 import json
-from datetime import datetime
 
 router = APIRouter()
 

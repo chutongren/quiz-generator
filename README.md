@@ -40,7 +40,7 @@ docker compose up --build
 ---
 ###  UML Diagram
 
-<img src="./images/UML.jpg" alt="UML Diagram" width="60%" align="left">
+<img src="./images/UML.jpg" alt="UML Diagram" style="display:block; margin-left:0; width:60%; height:auto;">
 
 
 
